@@ -213,6 +213,7 @@ section {
 	height: auto;
 	text-align: center;
 	margin: 5px;
+	box-sizing: border-box;
 }
 #p {
 	display: inline-block;
@@ -310,7 +311,7 @@ footer {
 @media (max-width: 768px) {
 	header {
 		height: 70px;
-		padding: 8px;
+		padding: 5px;
 	}
 
 	li {
@@ -356,7 +357,7 @@ footer {
 @media (max-width: 480px) {
 	header {
 		height: auto;
-		padding: 12px 6px;
+		padding: 5px;
 	}
 
 	li {
