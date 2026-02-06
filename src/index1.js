@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	const btnCV = document.getElementById('Descargar-Cv');
 	if (btnCV) {
 		btnCV.addEventListener('click', function () {
-			const cvUrl = 'documents/curriculum.pdf';
+			const cvUrl = 'src/documents/curriculum.pdf';
 			const link = document.createElement('a');
 			link.href = cvUrl;
 			link.download = 'Curriculum CV Ireth Franco.pdf';
