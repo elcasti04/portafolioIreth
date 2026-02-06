@@ -108,7 +108,7 @@ section {
 }
 
 #Inicio {
-	background-image: url('/src/img/fondo.png');
+	background-image: url('img/fondo.png');
 
 	background-size: cover; /* La imagen cubre todo el contenedor */
 	background-position: center; /* Centrada */
