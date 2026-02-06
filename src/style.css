@@ -209,7 +209,7 @@ section {
 	border-radius: 10%;
 	background-color: rgb(77, 64, 253);
 	color: white;
-	width: 80px;
+	width: 40%;
 	height: auto;
 	text-align: center;
 	margin: 5px;
@@ -290,6 +290,7 @@ section {
 	cursor: pointer;
 	transition: background-color 0.3s ease;
 	box-sizing: border-box;
+	width: auto;
 }
 
 .btn:hover,
