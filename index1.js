@@ -19,8 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		idiomabtn.addEventListener('click', function (e) {
 			e.preventDefault();
 			const file = window.location.pathname.split('/').pop() || 'index.html';
-			const newUrl =
-				file === 'index.html' || file === '' ? 'index-en.html' : 'index.html';
+			const newUrl = file.includes('index-en') ? 'index.html' : 'index-en.html';
 			window.location.href = newUrl;
 		});
 	}

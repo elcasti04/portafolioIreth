@@ -40,6 +40,11 @@
 	--btn-hover: #3730a3;
 }
 
+/* Evitar desbordamientos en todos los elementos */
+* {
+	box-sizing: border-box;
+}
+
 body {
 	background-color: var(--bg-main);
 	color: var(--text-main);
@@ -48,7 +53,9 @@ body {
 	font-size: 16px;
 	margin: 0;
 	padding: 0;
-	min-width: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	box-sizing: border-box;
 }
 
 h1 {
@@ -89,7 +96,7 @@ header {
 	border: 2px solid var(--border-main);
 	background-size: cover;
 	background-blend-mode: darken;
-	height: 80px;
+	height: auto;
 }
 
 section {
@@ -98,6 +105,8 @@ section {
 	margin-bottom: 10px;
 	border-radius: 20px;
 	text-align: center;
+	overflow: hidden;
+	box-sizing: border-box;
 }
 #img {
 	opacity: 0.1;
@@ -122,6 +131,7 @@ section {
 	margin: 0; /* Quita márgenes que dejan espacio negro */
 	width: 100%; /* Que ocupe todo el ancho */
 	height: 70vh; /* Que ocupe toda la altura visible de la pantalla */
+	overflow: hidden;
 
 	background-color: rgba(0, 0, 0, 0.5); /* capa oscura */
 	background-blend-mode: darken; /* mezcla */
@@ -139,6 +149,8 @@ section {
 	display: flex;
 	justify-content: space-around;
 	align-items: stretch;
+	overflow: hidden;
+	box-sizing: border-box;
 }
 
 #c {
@@ -149,6 +161,8 @@ section {
 	border: 2px solid rgb(1, 5, 204);
 	width: 45%;
 	height: auto;
+	overflow: hidden;
+	box-sizing: border-box;
 }
 .skills {
 	display: flex;
@@ -180,10 +194,13 @@ section {
 	border-radius: 12%;
 	background-color: rgb(77, 64, 253);
 	color: white;
-	width: 50rem;
+	width: 100%;
+	max-width: 800px;
 	height: 15rem;
 	text-align: center;
 	margin: 5px;
+	box-sizing: border-box;
+	overflow: hidden;
 }
 
 #n {
