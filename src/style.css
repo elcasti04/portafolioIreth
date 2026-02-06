@@ -1,0 +1,401 @@
+/* ===========================
+   TIPOGRAFÍA Y BASE
+=========================== */
+/* ===========================
+   VARIABLES DE COLOR (THEMES)
+=========================== */
+
+/* 🌙 Dark mode (default) */
+:root {
+	--bg-main: rgb(39, 36, 36);
+	--bg-card: rgb(12, 11, 11);
+	--bg-accent: rgb(77, 64, 253);
+	--bg-header: rgba(0, 0, 0, 0.5);
+
+	--text-main: antiquewhite;
+	--text-secondary: #ffffff;
+	--text-dark: #000000;
+
+	--border-main: rgb(1, 5, 204);
+	--link-hover: rgb(229, 255, 0);
+	--btn-main: #0078d7;
+	--btn-hover: #005a9e;
+}
+
+/* ☀️ Light mode */
+.light {
+	--bg-main: #999999;
+	--bg-card: #77a2ff;
+	--bg-accent: #4f46e5;
+	--bg-header: #d7d8e9;
+	--bg-p: var(--bg-p);
+
+	--text-main: #2e00fc;
+	--text-secondary: #333333;
+	--text-dark: #d6d6ff;
+
+	--border-main: #4f46e5;
+	--link-hover: #4f46e5;
+	--btn-main: #4f46e5;
+	--btn-hover: #3730a3;
+}
+
+body {
+	background-color: var(--bg-main);
+	color: var(--text-main);
+	font-family: 'Playpen Sans', cursive;
+	font-style: normal;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	min-width: 100%;
+}
+
+h1 {
+	color: blue;
+	text-align: center;
+}
+
+a {
+	color: rgb(36, 0, 196);
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+	color: rgb(229, 255, 0);
+}
+
+li {
+	list-style: none;
+	display: inline;
+	margin-right: 50px;
+	text-decoration: none;
+}
+
+input {
+	border-radius: 10px;
+	padding: 5px;
+}
+
+/* ===========================
+   HEADER Y SECCIONES
+=========================== */
+header {
+	position: -ms-page;
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: var(--bg-header);
+	border: 2px solid var(--border-main);
+	background-size: cover;
+	background-blend-mode: darken;
+	height: 80px;
+}
+
+section {
+	align-items: center;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 20px;
+	text-align: center;
+}
+#img {
+	opacity: 0.1;
+	background-color: rgb(0, 0, 0, 0.7);
+}
+#ft {
+	opacity: none;
+}
+
+#Inicio {
+	background-image: url('/src/img/fondo.png');
+
+	background-size: cover; /* La imagen cubre todo el contenedor */
+	background-position: center; /* Centrada */
+	background-repeat: no-repeat; /* No se repite */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	/* Cambios importantes */
+	margin: 0; /* Quita márgenes que dejan espacio negro */
+	width: 100%; /* Que ocupe todo el ancho */
+	height: 70vh; /* Que ocupe toda la altura visible de la pantalla */
+
+	background-color: rgba(0, 0, 0, 0.5); /* capa oscura */
+	background-blend-mode: darken; /* mezcla */
+}
+
+/* ===========================
+   ELEMENTOS ESPECÍFICOS
+=========================== */
+#ft {
+	border-radius: 50%;
+	border: 2px solid var(--border-main);
+}
+
+#box {
+	display: flex;
+	justify-content: space-around;
+	align-items: stretch;
+}
+
+#c {
+	background-color: var(--bg-card);
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 20px;
+	border: 2px solid rgb(1, 5, 204);
+	width: 45%;
+	height: auto;
+}
+.skills {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+}
+
+#m {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	border-radius: 10px;
+	background-color: rgb(77, 64, 253);
+	color: white;
+
+	width: 160px;
+	height: auto;
+
+	text-align: center;
+	margin: 5px;
+	padding: 10px;
+}
+
+#i {
+	display: inline-block;
+	border-radius: 12%;
+	background-color: rgb(77, 64, 253);
+	color: white;
+	width: 50rem;
+	height: 15rem;
+	text-align: center;
+	margin: 5px;
+}
+
+#n {
+	display: inline-block;
+	border-radius: 10%;
+	background-color: rgb(77, 64, 253);
+	color: white;
+	width: 80px;
+	height: auto;
+	text-align: center;
+	margin: 5px;
+}
+#p {
+	display: inline-block;
+	background-color: var(--bg-card);
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 20px;
+	border: 2px solid var(--border-main);
+	width: 25%;
+	height: auto;
+	justify-content: space-around;
+	align-items: stretch;
+}
+
+/* ===========================
+   CONTACTO / FORMULARIO
+=========================== */
+#Contacto {
+	max-width: 500px;
+	margin: 40px auto;
+	padding: 25px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	background-color: #f9f9f9;
+}
+
+#Contacto h1 {
+	text-align: center;
+	margin-bottom: 20px;
+	color: #333;
+}
+
+#Contacto form {
+	margin-top: 20px;
+}
+
+#Contacto label {
+	display: block;
+	margin: 10px 0 5px;
+	font-weight: bold;
+	color: #444;
+}
+
+#Contacto input,
+#Contacto textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	font-size: 14px;
+}
+
+#Contacto textarea {
+	resize: vertical;
+	min-height: 100px;
+}
+
+/* ===========================
+   BOTONES
+=========================== */
+.btn,
+#Contacto .btn {
+	display: inline-block;
+	padding: 10px 20px;
+	margin: 8px 5px;
+	background-color: var(--btn-main);
+	color: var(--text-secondary);
+	font-family: 'Playpen Sans', cursive;
+	font-size: 16px;
+	text-decoration: none;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.btn:hover,
+#Contacto .btn:hover {
+	background-color: var(--btn-hover);
+	color: var(--text-dark);
+}
+footer {
+	text-align: center;
+	padding: 10px;
+	background-color: var(--bg-header);
+	border-top: 2px solid var(--border-main);
+}
+
+/* ===========================
+	 RESPONSIVE: Tablets y Móviles
+=========================== */
+
+/* Tablets (landscape and portrait) */
+@media (max-width: 768px) {
+	header {
+		height: 70px;
+		padding: 8px;
+	}
+
+	li {
+		display: inline-block;
+		margin-right: 18px;
+		font-size: 14px;
+	}
+
+	#Inicio {
+		height: 55vh;
+		background-position: center top;
+	}
+
+	#box {
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	#c {
+		width: 90%;
+		margin: 0 auto 12px auto;
+	}
+
+	#p {
+		width: 45%;
+	}
+
+	.skills {
+		gap: 8px;
+	}
+
+	#m {
+		width: 140px;
+	}
+
+	.btn {
+		padding: 8px 14px;
+		font-size: 15px;
+	}
+}
+
+/* Móviles (smartphones) */
+@media (max-width: 480px) {
+	header {
+		height: auto;
+		padding: 12px 6px;
+	}
+
+	li {
+		display: block;
+		margin: 6px 0;
+		font-size: 16px;
+	}
+
+	#Inicio {
+		height: 45vh;
+		padding: 12px 8px;
+	}
+
+	#box {
+		flex-direction: column;
+		padding: 0 8px;
+	}
+
+	#c {
+		width: 100%;
+		margin: 0 0 12px 0;
+	}
+
+	#p {
+		width: 100%;
+		margin: 8px 0;
+	}
+
+	#ft {
+		height: 140px;
+		width: 140px;
+	}
+
+	#m {
+		width: 100%;
+	}
+
+	.skills {
+		flex-direction: column;
+		gap: 6px;
+	}
+
+	.btn {
+		display: block;
+		width: calc(100% - 16px);
+		margin: 8px auto;
+		padding: 10px 12px;
+		font-size: 16px;
+	}
+
+	#Contacto {
+		padding: 16px;
+		margin: 20px 12px;
+	}
+
+	#Contacto input,
+	#Contacto textarea {
+		font-size: 14px;
+	}
+}
