@@ -8,6 +8,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    emailjs.init({
+  publicKey: 'YW60BJj-qlmuXfPxy',
+  // Do not allow headless browsers
+  blockHeadless: true,
+  blockList: {
+    // Block the suspended emails
+    list: ['foo@emailjs.com', 'bar@emailjs.com'],
+    // The variable contains the email address
+    watchVariable: 'userEmail',
+  },
+  limitRate: {
+    // Set the limit rate for the application
+    id: 'app',
+    // Allow 1 request per 10s
+    throttle: 10000,
+  },
+});
+</script>
 </head>
 <body>
     <header id="inicio">
@@ -152,7 +172,7 @@
   <label for="nombre">Nombre:</label>
   <input
     type="text"
-    id="nombre"
+    id="name"
     name="nombre"
     placeholder="Escribe tu nombre"
     required
@@ -169,7 +189,7 @@
 
   <label for="mensaje">Mensaje:</label>
   <textarea
-    id="mensaje"
+    id="message"
     name="mensaje"
     placeholder="Escribe tu mensaje aquí"
     required

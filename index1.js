@@ -32,3 +32,39 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 });
+
+// Selecciona el formulario
+const formDom = document.querySelector('form');
+
+// Función que maneja el envío del formulario
+function getInputsData(e) {
+  e.preventDefault();
+
+  const infoInputs = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    message: document.getElementById('message').value
+  };
+
+  // Validación de campos
+  if (infoInputs.name && infoInputs.email && infoInputs.message) {
+    emailjs.send('service_vblfcyp', 'template_mblfzwo', infoInputs).then(
+      (response) => {
+        console.log('SUCCESS!', response.status, response.text);
+      },
+      (error) => {
+        console.log('FAILED...', error);
+      }
+    );
+  } else {
+    console.log("Por favor completa todos los campos.");
+  }
+}
+
+// Función que inicializa el listener
+function sendEmail() {
+  formDom.addEventListener('click', getInputsData);
+}
+
+// Exportar la función
+sendEmail();
